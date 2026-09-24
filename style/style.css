@@ -1,0 +1,168 @@
+@import 'fonts.css';
+
+/* Root start */
+
+:root {
+    --DMB: 'DMSans_18pt-Bold';
+    --DMM: 'DMSans_18pt-Medium';
+    --DMR: 'DMSans_18pt-Regular';
+    --MB: 'Rosario-Bold';
+    --body: #ffffff;
+    --text: #323232;
+    --dots: #828282;
+    --dots-active: #7177F1;
+    --purple: #7177F1;
+    --orange: #E44F26;
+    --blue: #1572B6;
+    --light-red: #790FF1;
+    --green: #09a66d;
+}
+
+body {
+    background: var(--body);
+    color: var(--text);
+    font-family: var(--DMR);
+}
+
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Root end */
+/* **************************** */
+
+/* Header start */
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 143px;
+}
+
+.header__nav {
+    background: var(--body) !important;
+}
+
+.header__nav-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__dors-icon {
+    color: var(--text);
+    margin-left: 30px;
+}
+
+.header__dors-btn {
+    margin-left: 30px;
+    color: var(--body);
+    background: var(--green);
+    border-radius: 8px;
+    font-family: var(--DMR);
+    font-size: 18px;
+    line-height: 111%;
+    padding: 10px;
+}
+
+/* *** nav stopied *** */
+
+.header__organic-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 92px;
+}
+
+.header__box-title {
+    font-family: var(--MB);
+    font-size: 70px;
+    line-height: 129%;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header__box-text {
+    font-family: var(--DMR);
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--dots);
+}
+
+.header__box-bottom {
+    margin-top: 70px;
+}
+
+.header__bottom-btn {
+    font-family: var(--DMM);
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--text);
+}
+
+.header__bottom-arrow {
+    color: var(--body);
+    background: var(--green);
+    border-radius: 100%;
+    padding: 32px;
+    margin-left: 20px;
+}
+
+/* *** top stopied *** */
+
+.header__organic-fotkitsen {
+    margin-top: 30px;
+}
+
+.header__fotkitsen-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.header__right-item {
+    display: flex;
+    gap: 24px;
+    padding: 17px 46px 17px 30px;
+    background: var(--green);
+    max-width: 250px;
+    width: 100%;
+}
+
+.header__item-photo {
+    padding-top: 10px;
+}
+
+.header__mitopik-title {
+    font-family: var(--DMR);
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--text);
+}
+
+.header__mitopik-text {
+    font-family: var(--DMR);
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--text);
+}
+
+/* ******* header finish */

@@ -1,0 +1,79 @@
+@import 'fonts.css';
+
+/* Root start */
+
+:root {
+    --DMB: 'DMSans_18pt-Bold';
+    --DMM: 'DMSans_18pt-Medium';
+    --DMR: 'DMSans_18pt-Regular';
+    --MB: 'Rosario-Bold';
+    --body: #ffffff;
+    --text: #323232;
+    --dots: #828282;
+    --dots-active: #7177F1;
+    --purple: #7177F1;
+    --orange: #E44F26;
+    --blue: #1572B6;
+    --light-red: #790FF1;
+    --green: #09a66d;
+}
+
+/* Root end */
+
+.explore {
+    margin-top: 343px;
+    background: var(--green);
+}
+
+.explore__megabox-special {
+    padding-top: 85px;
+}
+
+.explore__right-title {
+    padding-top: 30px;
+    max-width: 630px;
+    width: 100%;
+    font-family: var(--DMB);
+    font-size: 70px;
+    line-height: 129%;
+    color: var(--text);
+}
+
+.explore__right-text {
+    padding-top: 20px;
+    max-width: 574px;
+    width: 100%;
+    font-family: var(--DMR);
+    font-size: 18px;
+    line-height: 167%;
+    color: var(--dots);
+}
+
+/* **** */
+
+.explore__right-fresh {
+    padding-top: 25px;
+}
+
+.explore__fresh-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 200px;
+}
+
+.explore__left-title{
+    font-family: var(--DMM);
+    font-size: 18px;
+    line-height: 167%;
+    /* text-align: center; */
+    color: var(--text)
+}
+
+.explore__left-icon {
+    font-size: 40px;
+    color: var(--green);
+    border-radius: 50%;
+    background: var(--body);
+    padding: 20px;
+}
