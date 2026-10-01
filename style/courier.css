@@ -1,105 +1,337 @@
 @import 'fonts.css';
 
-/* Root start */
-
 :root {
     --DMB: 'DMSans_18pt-Bold';
     --DMM: 'DMSans_18pt-Medium';
     --DMR: 'DMSans_18pt-Regular';
     --MB: 'Rosario-Bold';
+
     --body: #ffffff;
     --text: #323232;
     --dots: #828282;
-    --dots-active: #7177F1;
-    --purple: #7177F1;
-    --orange: #E44F26;
-    --blue: #1572B6;
-    --light-red: #790FF1;
     --green: #09a66d;
 }
 
-/* Root end */
+/* ================= COURIER ================= */
 
-/* ****** courier start ****** */
+.courier {
+    padding-bottom: 150px;
+}
+
+.courier__top {
+    padding-bottom: 40px;
+}
 
 .courier__top-title {
     max-width: 671px;
     width: 100%;
     font-family: var(--MB);
     font-size: 70px;
-    line-height: 129%;
+    line-height: 1.2;
     color: var(--text);
 }
 
 .courier__top-text {
     max-width: 631px;
     width: 100%;
+    margin-top: 20px;
     font-family: var(--DMR);
     font-size: 18px;
-    line-height: 167%;
+    line-height: 1.67;
     color: var(--dots);
 }
 
-/* *********** */
+/* ================= CONTENT ================= */
 
 .courier__boxx {
     margin-top: 50px;
     position: relative;
+    min-height: 500px;
 }
 
 .courier__boxx-left {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
+    row-gap: 45px;
+    padding-top: 20px;
+}
+
+.courier__left-item {
+    align-items: center;
+    transition: 0.35s ease;
+}
+
+.courier__left-item:hover {
+    transform: translateX(10px);
+}
+
+.courier__item-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+.courier__left-item:hover .courier__item-img {
+    transform: scale(1.12) rotate(-5deg);
+}
+
+.courier__item-info {
+    padding-left: 20px;
 }
 
 .courier__item-title {
     font-family: var(--DMB);
     font-size: 20px;
-    line-height: 150%;
+    line-height: 1.5;
     color: var(--text);
 }
 
 .courier__item-text {
     max-width: 277px;
     width: 100%;
+    margin-top: 7px;
     font-family: var(--DMR);
     font-size: 14px;
-    line-height: 143%;
+    line-height: 1.43;
     color: var(--dots);
 }
 
-.courier__boxx-icon {
-    position: absolute;
-    top: 400px;
-    left: 200px;
-    font-size: 50px;
-    color: var(--green);
-}
-
-/* ************ right start */
+/* ================= RIGHT IMAGE ================= */
 
 .courier__boxx-right {
     position: relative;
-    z-index: 2;
+    min-height: 500px;
 }
 
 .courier__right-img {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: -50px;
     left: 150px;
+    max-width: 400px;
+    animation: courierFloat 4s ease-in-out infinite;
 }
 
 .courier__right-wimg {
     position: absolute;
+    z-index: 1;
     top: 20px;
     left: 120px;
+    max-width: 400px;
+    animation: borderFloat 5s ease-in-out infinite;
 }
 
 .courier__right-ximg {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: -70px;
     left: 250px;
+    max-width: 100px;
+    animation: colorFloat 3s ease-in-out infinite;
+}
+
+.courier__boxx-icon {
+    position: absolute;
+    left: 200px;
+    bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    font-size: 25px;
+    color: var(--green);
+    background: var(--body);
+    border-radius: 50%;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.courier__boxx-icon:hover {
+    color: var(--body);
+    background: var(--green);
+    transform: translateY(8px);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes courierFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes borderFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(12px) rotate(2deg);
+    }
+}
+
+@keyframes colorFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1199px) {
+
+    .courier__top-title {
+        font-size: 58px;
+    }
+
+    .courier__boxx-right {
+        min-height: 450px;
+        margin-top: 50px;
+    }
+
+    .courier__right-img {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 350px;
+    }
+
+    .courier__right-wimg {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 350px;
+    }
+
+    .courier__right-ximg {
+        left: 62%;
+    }
+
+    .courier__boxx-icon {
+        left: 50%;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+
+    .courier {
+        padding-bottom: 90px;
+    }
+
+    .courier__top-title {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .courier__top-text {
+        font-size: 16px;
+    }
+
+    .courier__boxx {
+        margin-top: 30px;
+    }
+
+    .courier__boxx-left {
+        row-gap: 30px;
+    }
+
+    .courier__left-item {
+        justify-content: flex-start !important;
+    }
+
+    .courier__item-info {
+        padding-left: 15px;
+    }
+
+    .courier__item-title {
+        font-size: 18px;
+    }
+
+    .courier__item-text {
+        font-size: 14px;
+    }
+
+    .courier__boxx-right {
+        min-height: 380px;
+        margin-top: 60px;
+    }
+
+    .courier__right-img {
+        top: 0;
+        max-width: 290px;
+    }
+
+    .courier__right-wimg {
+        top: 50px;
+        max-width: 290px;
+    }
+
+    .courier__right-ximg {
+        top: -20px;
+        left: 65%;
+        max-width: 70px;
+    }
+
+    .courier__boxx-icon {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .courier__top-title {
+        font-size: 34px;
+    }
+
+    .courier__top-text {
+        font-size: 15px;
+    }
+
+    .courier__left-item {
+        width: 100% !important;
+    }
+
+    .courier__item-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .courier__item-title {
+        font-size: 17px;
+    }
+
+    .courier__item-text {
+        font-size: 13px;
+    }
+
+    .courier__boxx-right {
+        min-height: 320px;
+    }
+
+    .courier__right-img,
+    .courier__right-wimg {
+        max-width: 240px;
+    }
 }
